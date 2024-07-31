@@ -2,9 +2,13 @@
 <div >
 <v-carousel>
   <v-carousel-item
-    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    cover
-  ></v-carousel-item>
+  >
+<div class="flex flex-row justify-between">
+  <div>1</div>
+  <div>1</div>
+
+</div>
+</v-carousel-item>
 
   <v-carousel-item
     src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg"
