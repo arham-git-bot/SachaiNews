@@ -1,13 +1,15 @@
 <template>
   <div class="home">
-<!--  -->
+
     <HelloWorld/>
     <Navbar />
+
 <Featured/>
+
+   <Trending />
 <Latest/>
 <Browse/>
 <Footer/>
-<!--  -->
   </div>
 </template>
 
@@ -19,6 +21,9 @@ import Latest from '@/components/Latest.vue'
 import Browse from '@/components/Browse.vue'
 import Footer from'@/components/Footer.vue'
 import Featured from '@/components/Featured.vue'
+import Footer from '@/components/Footer.vue'
+import Trending from'@/components/Trending.vue'
+
 export default {
   name: 'HomeView',
   components: {
@@ -28,6 +33,8 @@ export default {
     Browse,
     Footer,
     Featured
+
+    Trending
   }
 }
 </script>
