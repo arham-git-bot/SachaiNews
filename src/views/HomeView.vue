@@ -3,7 +3,7 @@
 <!--  -->
     <HelloWorld/>
     <Navbar />
-
+<Featured/>
 <Latest/>
 <Browse/>
 <Footer/>
@@ -18,6 +18,7 @@ import Navbar from '@/components/Navbar.vue'
 import Latest from '@/components/Latest.vue'
 import Browse from '@/components/Browse.vue'
 import Footer from'@/components/Footer.vue'
+import Featured from '@/components/Featured.vue'
 export default {
   name: 'HomeView',
   components: {
@@ -26,6 +27,7 @@ export default {
     Latest,
     Browse,
     Footer,
+    Featured
   }
 }
 </script>

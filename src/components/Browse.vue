@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20">
+  <div class="mt-20 mb-20">
     <div class="text-3xl font-bold">Browse By Topic</div>
     <div class="flex flex-wrap gap-4 mt-4">
       <div v-for="item in navcategories3" :key="item._id">

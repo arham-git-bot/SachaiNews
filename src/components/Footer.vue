@@ -1,4 +1,5 @@
-<template>
+<template> 
+<v-divider></v-divider>
   <div class="w-[100%] flex flex-row justify-between">
     <div class="w-[45%]">
       <div>
