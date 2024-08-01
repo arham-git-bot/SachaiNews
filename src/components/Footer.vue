@@ -13,8 +13,8 @@
             class="h-[80px] w-auto"
         /></a>
       </div>
-      <div>Pages</div>
-      <div class="flex flex-row justify-between gap-0 mt-4">
+      <div class="text-[24px] mt-5">Pages</div>
+      <div class="flex flex-row justify-between gap-0 mt-4 text-[22px]">
         <div>Home</div>
         <div>Category</div>
         <div>Astrology</div>
@@ -23,9 +23,9 @@
       </div>
     </div>
     <div class="w-[40%] flex justify-around">
-      <div class="w-[20%]">
-        <div class="text-center">Get our app</div>
-        <div>
+      <div class="w-[40%]">
+        <div class="text-[24px] bold text-center mt-8">Get our app</div>
+        <div class="mt-5 flex flex-col items-center">
           <a
             class="mt-3"
             href="https://apps.apple.com/us/app/newsshield-io/id6448037673?platform=iphone"
@@ -48,10 +48,10 @@
           /></a>
         </div>
       </div>
-      <div class="w-[20%]">
+      <div class="w-[20%] text-[24px] bold text-center mt-8">
         Follow Us
 
-        <div>
+        <div class="mt-5">
           <a href="">
             <i class="fa-brands fa-linkedin"></i>
           </a>
