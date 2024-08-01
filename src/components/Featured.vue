@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-20">
     <div>
       <div class="text-[30px] md:text-[45px] font-bold mb-8">Featured</div>
       <div v-if="blogs.length">

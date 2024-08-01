@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="mt-10">
+    <div class="mt-20">
       <div class="flex justify-between w-full items-center mb-8">
         <div class="text-4xl font-bold">Latest News</div>
         <div class="text-red-500">See all→</div>

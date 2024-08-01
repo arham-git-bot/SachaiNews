@@ -1,9 +1,11 @@
 <template>
-  <v-carousel class="relative rounded-[20px]" v-if="sliceData.length">
+  <div class="text-[30px] md:text-[45px] font-bold mb-8">Trending Headlines</div>
+  <v-carousel  class="relative rounded-[20px]" v-if="sliceData.length">
     <v-carousel-item
       v-for="blog in sliceData"
       :key="blog._id"
       :src="blog.imgixUrlHighRes"
+ 
       cover
     >
       <div class="absolute right-0 mr-8 mt-4">
@@ -22,8 +24,8 @@
         </div>
       </div>
       <div class="absolute bottom-8 ml-8 w-[80%]">
-        <div class="mt-2 text-[30px] text-white">{{ blog.headline }}</div>
-        <div class="flex gap-1 text-white text-[16px]">
+        <div class="mt-2 text-[14px] md:text-[30px] text-white">{{ blog.headline }}</div>
+        <div class="flex gap-1 text-white text-[12px] md:text-[16px]">
           <div>{{ blog.source }}</div>
           <div>| {{ formatPublishTime(blog.publishTime) }}</div>
         </div>
