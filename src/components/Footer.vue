@@ -13,7 +13,7 @@
             class="h-[80px] w-auto"
         /></a>
       </div>
-      <div class="text-[24px] mt-5">Pages</div>
+      <div class="text-[24px] mt-5">Pagess</div>
       <div class="flex flex-row justify-between gap-0 mt-4 text-[22px]">
         <div>Home</div>
         <div>Category</div>
