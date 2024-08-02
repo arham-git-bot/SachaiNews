@@ -4,12 +4,15 @@
 body{
     background-color: #fff;
 }
-
+/* .v-carousel {
+    height: 363px !important;
+} */
 
 @media only screen and (max-width: 600px){
 .v-carousel {
     height: 350px !important;
 }
+
 }
 .v-carousel__controls{
     background:none

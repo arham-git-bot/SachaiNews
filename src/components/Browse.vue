@@ -18,54 +18,54 @@
       <div class="text-2xl font-bold">Breaking News</div>
       <div class="see-all-style"><a href="#">See all →</a></div>
     </div>
-  <div
-  class="flex flex-wrap gap-6 justify-center sm:justify-between mt-6"
->
-  <div
-    v-for="item in latestNews"
-    :key="item._id"
-    class="w-full sm:w-[48%] lg:w-[32%] bg-white flex flex-col sm:flex-row rounded-lg overflow-hidden"
-  >
-    <div class="w-full sm:w-[40%]">
-      <a :href="`${SACHAI_NEWS_URL}${item._id}`">
-        <img
-          class="w-full h-40 sm:h-full object-cover"
-          :src="item.imgixUrlHighRes"
-          alt=""
-        />
-      </a>
+    <div
+      class="flex flex-wrap gap-6 justify-center sm:justify-between mt-6"
+    >
+      <div
+        v-for="item in displayedNews"
+        :key="item._id"
+        class="w-[355.76px] sm:w-[48%] lg:w-[32%] bg-white flex flex-row rounded-lg overflow-hidden"
+      >
+        <div class="w-full sm:w-[40%]">
+          <a :href="`${SACHAI_NEWS_URL}${item._id}`">
+            <img
+              class="w-full h-40 sm:h-full object-cover"
+              :src="item.imgixUrlHighRes"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="w-full sm:w-[60%] p-4 flex flex-col justify-between">
+          <div class="text-gray-400 text-xs flex gap-1 mb-2">
+            <div>{{ item.source }}</div>
+            <div>| {{ formatDate(item.publishTime) }}</div>
+          </div>
+          <div class="text-[12px] sm:text-sm mb-2">
+            <a
+              :href="`${SACHAI_NEWS_URL}${item._id}`"
+              class="hover:text-current font-semibold"
+            >
+              {{ item.headline }}
+            </a>
+          </div>
+          <div class="text-xs mb-2">
+            <a
+              :href="`${SACHAI_NEWS_URL}${item._id}`"
+              class="hover:text-current"
+            >
+              {{ truncateText(item.summary, 100) }}
+            </a>
+          </div>
+          <div class="text-xs text-gray-500 flex items-center">
+            <span class="text-red-500 mr-1">Politics</span>
+            <span>| 4 min read</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="w-full sm:w-[60%] p-4 flex flex-col justify-between">
-      <div class="text-gray-400 text-xs flex gap-1 mb-2">
-        <div>{{ item.source }}</div>
-        <div>| {{ formatDate(item.publishTime) }}</div>
-      </div>
-      <div class="text-sm mb-2">
-        <a
-          :href="`${SACHAI_NEWS_URL}${item._id}`"
-          class="hover:text-current font-semibold"
-        >
-          {{ item.headline }}
-        </a>
-      </div>
-      <div class="text-xs mb-2">
-        <a
-          :href="`${SACHAI_NEWS_URL}${item._id}`"
-          class="hover:text-current"
-        >
-          {{ truncateText(item.summary, 100) }}
-        </a>
-      </div>
-      <div class="text-xs text-gray-500 flex items-center">
-        <span class="text-red-500 mr-1">Politics</span>
-        <span>| 4 min read</span>
-      </div>
-    </div>
-  </div>
-</div>
-
   </div>
 </template>
+
 
 <script>
 import moment from "moment";
@@ -80,11 +80,11 @@ export default {
       navcategories3: [],
       latestNews: [],
       SACHAI_NEWS_URL: "https://news.sachai.io/news/",
+      screenWidth: window.innerWidth, 
     };
   },
   async created() {
     try {
-
       const browseCategories = await axios.post(
         "https://dev-api.askus.news/category/getAllCat",
         {
@@ -109,6 +109,22 @@ export default {
       console.error(error);
     }
   },
+  mounted() {
+    window.addEventListener('resize', this.updateScreenWidth);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateScreenWidth);
+  },
+  computed: {
+    displayedNews() {
+     
+      if (this.screenWidth < 640) {
+        return this.latestNews.slice(0, 2);
+      }
+  
+      return this.latestNews;
+    },
+  },
   methods: {
     truncateText(text, maxLength) {
       if (text.length > maxLength) {
@@ -119,8 +135,12 @@ export default {
     formatDate(date) {
       return moment(date).fromNow();
     },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
+    },
   },
 };
+
 </script>
 
 <style scoped>

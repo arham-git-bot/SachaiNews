@@ -9,10 +9,7 @@
           progress="primary"
           hide-delimiters
         >
-          <v-carousel-item
-            v-for="(blog, index) in blogs"
-            :key="index"
-          >
+          <v-carousel-item v-for="(blog, index) in blogs" :key="index">
             <div class="flex flex-row flex-wrap justify-between items-start">
               <div class="w-full lg:w-[50%] mb-4 lg:mb-0">
                 <img
@@ -34,7 +31,9 @@
                     {{ blog.headline }}
                   </a>
                 </div>
-                <div class="text-[14px] sm:text-[12px] md:text-[16px] mt-5 line-clamp-3">
+                <div
+                  class="text-[14px] sm:text-[12px] md:text-[16px] mt-5 line-clamp-3"
+                >
                   {{ blog.summary }}
                 </div>
               </div>
@@ -47,16 +46,15 @@
 </template>
 
 <script>
-import axios from 'axios';
-import moment from 'moment';
-
+import axios from "axios";
+import moment from "moment";
 
 export default {
   data() {
     return {
       blogs: [],
       carouselKey: 0,
-            SACHAI_NEWS_URL: 'https://news.sachai.io/news/',
+      SACHAI_NEWS_URL: "https://news.sachai.io/news/",
       languageId: "6421a32aa020a23deacecf92",
     };
   },
@@ -67,7 +65,7 @@ export default {
     async fetchBlogs() {
       try {
         const response = await axios.post(
-          'https://dev-api.askus.news/news/getAllBlogsForWeb',
+          "https://dev-api.askus.news/news/getAllBlogsForWeb",
           {
             language: this.languageId,
             page: 1,
@@ -77,7 +75,7 @@ export default {
         // Increment carouselKey to force re-render when data is fetched
         this.carouselKey++;
       } catch (error) {
-        console.error('Error fetching blogs:', error);
+        console.error("Error fetching blogs:", error);
       }
     },
     moment(date) {

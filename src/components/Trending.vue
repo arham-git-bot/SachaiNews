@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[30px] md:text-[45px] font-bold mb-8">Trending Headlines</div>
+  <div class="text-[30px] md:text-[45px] font-bold mb-8" height="363px">Trending Headlines</div>
   <v-carousel class="relative rounded-[20px]" v-if="sliceData.length">
     <v-carousel-item
       v-for="blog in sliceData"
@@ -77,6 +77,10 @@ export default {
 <style scoped>
 .v-carousel__controls {
   background: transparent !important;
+}
+
+.v-carousel {
+  height: 363px !important;
 }
 
 .v-carousel__control--prev,
