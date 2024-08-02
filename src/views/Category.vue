@@ -2,7 +2,9 @@
   <div class="bg-black">
     <v-row class="mt-10">
       <v-col cols="12" md="8" class="bg-white p-6">
-        <div class="text-[32px]">Lorem ipsum dolor sit amet consectetur. Vel dui sit</div>
+        <div class="text-[32px]">
+          Lorem ipsum dolor sit amet consectetur. Vel dui sit
+        </div>
         <div class="mt-4">
           <img
             class="h-[500px] w-[100%] object-cover rounded-[20px]"
@@ -14,35 +16,37 @@
           <div class="w-[35%] flex flex-row justify-between">
             <div>Politics | 4 min read</div>
             <div class="flex gap-2">
-            <div>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="mt-2">Don’t wait. The purpose of our lives is to be happy!</div>
+        <div class="mt-2">
+          Don’t wait. The purpose of our lives is to be happy!
+        </div>
         <div>
           Upon arrival, your senses will be rewarded with the pleasant scent of
           lemongrass oil used to clean the natural wood found throughout the
