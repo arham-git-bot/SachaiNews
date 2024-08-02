@@ -1,8 +1,8 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-20 ">
     <div>
-      <div class="text-[30px] md:text-[45px] font-bold mb-8">Featured</div>
-      <div v-if="blogs.length">
+      <div class="text-[30px] md:text-[45px] font-bold mb-8 mr-[80px] ml-[80px]">Featured</div>
+      <div v-if="blogs.length" >
         <v-carousel
           :key="carouselKey"
           height="400"
@@ -13,7 +13,7 @@
             v-for="(blog, index) in blogs"
             :key="index"
           >
-            <div class="flex flex-row flex-wrap justify-between items-start">
+            <div class="flex flex-row flex-wrap justify-between items-start pr-20 pl-20" >
               <div class="w-full lg:w-[50%] mb-4 lg:mb-0">
                 <img
                   class="w-full h-[250px] lg:h-[396px] rounded-xl object-cover"
@@ -96,5 +96,5 @@ export default {
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 3; /* Limits to 3 lines */
-}
+} 
 </style>

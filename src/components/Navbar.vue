@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex justify-between mt-10 mb-10">
+    <div class="flex justify-between mt-10 mb-10 mr-[80px] ml-[80px]">
       <div class="flex justify-between w-[30%] items-center">
         <div>
           <img

@@ -1,6 +1,6 @@
 <template> 
 
-  <div class="w-[100%] flex flex-col sm:flex-row justify-between border-t border-gray-200 ">
+  <div class="w-[100%] flex flex-col sm:flex-row justify-between border-t border-gray-200  ">
     <div class="w-[100%] sm:w-[40%] mt-10">
       <div>
         <a

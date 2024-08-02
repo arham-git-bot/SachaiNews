@@ -1,5 +1,6 @@
-<template>
-  <div class="text-[30px] md:text-[45px] font-bold mb-8">Trending Headlines</div>
+<template >
+    <div class="mr-[80px] ml-[80px]">
+  <div class="text-[30px] md:text-[45px] font-bold mb-8 ">Trending Headlines</div>
   <v-carousel class="relative rounded-[20px]" v-if="sliceData.length" :show-arrows="false"  delimiter-icon="mdi-rectangle">
     <v-carousel-item
       v-for="blog in sliceData"
@@ -32,6 +33,7 @@
       </div>
     </v-carousel-item>
   </v-carousel>
+</div>
 </template>
 
 <script>
@@ -131,4 +133,5 @@ export default {
     height: 363px !important;
     width: 100% !important;
 }
+
 </style>
