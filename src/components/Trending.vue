@@ -10,20 +10,20 @@
       <div class="absolute right-0 mr-8 mt-4">
         <div class="flex">
           <span
-            class="material-symbols-outlined bg-white rounded-full h-[35px] w-[35px] flex justify-center items-center"
+            class="material-symbols-outlined bg-white rounded-full h-[37px] w-[37px] flex justify-center items-center"
           >
             share
           </span>
           &nbsp;
           <span
-            class="material-symbols-outlined bg-white rounded-full h-[35px] w-[35px] flex justify-center items-center"
+            class="material-symbols-outlined bg-white rounded-full h-[37px] w-[37px] flex justify-center items-center"
           >
             bookmark
           </span>
         </div>
       </div>
-      <div class="absolute bottom-20 ml-8 w-[80%] text-white">
-        <div class="mt-2 text-[14px] md:text-[30px]">{{ blog.headline }}</div>
+      <div class="absolute bottom-10 ml-8 w-[80%] text-white">
+        <div class="mt-2 text-[14px] md:text-[28px]">{{ blog.headline }}</div>
         <div class="flex gap-1 text-[12px] md:text-[16px] text-white">
           <div>{{ blog.source }}</div>
           <div>| {{ formatPublishTime(blog.publishTime) }}</div>
@@ -125,5 +125,9 @@ export default {
 /* Additional styling to ensure text is white */
 .v-carousel-item .text-white {
   color: white !important;
+}
+.v-carousel{
+    height: 363px !important;
+    width: 100% !important;
 }
 </style>
