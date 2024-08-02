@@ -1,6 +1,6 @@
 <template>
   <div class="text-[30px] md:text-[45px] font-bold mb-8">Trending Headlines</div>
-  <v-carousel class="relative rounded-[20px]" v-if="sliceData.length">
+  <v-carousel class="relative rounded-[20px]" v-if="sliceData.length" :show-arrows="false"  delimiter-icon="mdi-rectangle">
     <v-carousel-item
       v-for="blog in sliceData"
       :key="blog._id"
