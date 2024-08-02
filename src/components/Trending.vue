@@ -1,11 +1,10 @@
 <template>
   <div class="text-[30px] md:text-[45px] font-bold mb-8">Trending Headlines</div>
-  <v-carousel  class="relative rounded-[20px]" v-if="sliceData.length">
+  <v-carousel class="relative rounded-[20px]" v-if="sliceData.length">
     <v-carousel-item
       v-for="blog in sliceData"
       :key="blog._id"
       :src="blog.imgixUrlHighRes"
- 
       cover
     >
       <div class="absolute right-0 mr-8 mt-4">
@@ -23,9 +22,9 @@
           </span>
         </div>
       </div>
-      <div class="absolute bottom-8 ml-8 w-[80%]">
-        <div class="mt-2 text-[14px] md:text-[30px] text-white">{{ blog.headline }}</div>
-        <div class="flex gap-1 text-white text-[12px] md:text-[16px]">
+      <div class="absolute bottom-20 ml-8 w-[80%] text-white">
+        <div class="mt-2 text-[14px] md:text-[30px]">{{ blog.headline }}</div>
+        <div class="flex gap-1 text-[12px] md:text-[16px] text-white">
           <div>{{ blog.source }}</div>
           <div>| {{ formatPublishTime(blog.publishTime) }}</div>
         </div>
@@ -33,12 +32,6 @@
     </v-carousel-item>
   </v-carousel>
 </template>
-
-<style scoped>
-.v-carousel__controls {
-  background: transparent !important; /* Remove background */
-}
-</style>
 
 <script>
 import axios from "axios";
@@ -53,7 +46,6 @@ export default {
   },
   computed: {
     sliceData() {
-      // Ensure sliceData is always an array
       return Array.isArray(this.blogs) ? this.blogs.slice(0, 3) : [];
     },
   },
@@ -83,41 +75,55 @@ export default {
 </script>
 
 <style scoped>
-
-/* Remove default background and gradient from the controls */
 .v-carousel__controls {
-  background: transparent !important; /* Ensure background is transparent */
+  background: transparent !important;
 }
 
 .v-carousel__control--prev,
 .v-carousel__control--next {
-  background: transparent !important; /* Remove background from control buttons */
-  box-shadow: none !important; /* Remove any box-shadow */
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Ensure there are no gradients applied to pseudo-elements or overlays */
 .v-carousel__control::before,
 .v-carousel__control::after {
-  background: transparent !important; /* Remove gradients from pseudo-elements */
-  box-shadow: none !important; /* Remove box-shadow from pseudo-elements */
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* If there's a gradient on a parent or another layer, reset it */
 .v-carousel__control__prev,
 .v-carousel__control__next {
-  background: transparent !important; /* Ensure background is transparent */
-  box-shadow: none !important; /* Remove any box-shadow */
+  background: transparent !important;
+  box-shadow: none !important;
 }
+
 .v-carousel__controls {
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    list-style-type: none;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    background: none !important;
-    }
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: none !important;
+}
+
+.v-carousel-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Additional styling to ensure text is white */
+.v-carousel-item .text-white {
+  color: white !important;
+}
 </style>
