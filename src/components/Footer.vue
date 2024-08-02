@@ -1,7 +1,7 @@
 <template> 
-<v-divider></v-divider>
-  <div class="w-[100%] flex flex-col sm:flex-row justify-between">
-    <div class="w-[100%] sm:w-[45%]">
+
+  <div class="w-[100%] flex flex-col sm:flex-row justify-between border-t border-gray-200 ">
+    <div class="w-[100%] sm:w-[40%] mt-10">
       <div>
         <a
           href="https://sachai.io/"
@@ -23,7 +23,7 @@
 
       </div>
     </div>
-    <div class="w-[100%] sm:w-[40%] flex flex-col  sm:flex-row justify-around">
+    <div class="w-[100%] sm:w-[40%] flex flex-col  sm:flex-row justify-around mt-10">
       <div class="w-[100%] sm:w-[40%]">
         <div class="text-[24px] bold text-center mt-8">Get our app</div>
         <div class="mt-5 flex flex-col items-center">
@@ -64,7 +64,9 @@
         </div>
       </div>
     </div>
+   
   </div>
+   <div class="w-full text-center mt-20 mb-10">Copyright © 2023 sachai | All Rights Reserved.</div>
 </template>
 <style scoped>
 i{
