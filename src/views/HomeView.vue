@@ -6,7 +6,7 @@
    <Trending />
 <Featured/>
 
-
+<HelloWorld/>
 <Latest/>
 <Browse/>
 <Footer/>
@@ -18,7 +18,7 @@
 import Navbar from '@/components/Navbar.vue'
 import Latest from '@/components/Latest.vue'
 import Browse from '@/components/Browse.vue'
-
+import HelloWorld from '@/components/HelloWorld.vue'
 import Featured from '@/components/Featured.vue'
 import Footer from '@/components/Footer.vue'
 import Trending from'@/components/Trending.vue'
@@ -31,7 +31,7 @@ export default {
     Browse,
     Footer,
     Featured,
-
+HelloWorld,
     Trending
   }
 }
