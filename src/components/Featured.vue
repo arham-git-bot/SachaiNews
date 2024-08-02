@@ -1,7 +1,7 @@
 <template>
   <section class="mt-20 ">
     <div>
-      <div class="text-[30px] md:text-[45px] font-bold mb-8 mr-[80px] ml-[80px]">Featured</div>
+      <div class="text-[30px] md:text-[45px] font-bold mb-8 mr-[60px] ml-[60px]">Featured</div>
       <div v-if="blogs.length" >
         <v-carousel
           :key="carouselKey"

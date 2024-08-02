@@ -1,5 +1,5 @@
 <template >
-    <div class="mr-[80px] ml-[80px]">
+    <div class="mr-[60px] ml-[60px]">
   <div class="text-[30px] md:text-[45px] font-bold mb-8 ">Trending Headlines</div>
   <v-carousel class="relative rounded-[20px]" v-if="sliceData.length" :show-arrows="false"  delimiter-icon="mdi-rectangle">
     <v-carousel-item

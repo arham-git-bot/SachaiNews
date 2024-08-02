@@ -1,6 +1,6 @@
 <template> 
-
-  <div class="w-[100%] flex flex-col sm:flex-row justify-between border-t border-gray-200  ">
+<div class="ml-[60px] mr-[60px]">
+  <div class="w-[100%] flex flex-col sm:flex-row justify-between border-t border-gray-200 ">
     <div class="w-[100%] sm:w-[40%] mt-10">
       <div>
         <a
@@ -65,6 +65,7 @@
       </div>
     </div>
    
+  </div>
   </div>
    <div class="w-full text-center mt-20 mb-10">Copyright © 2023 sachai | All Rights Reserved.</div>
 </template>
