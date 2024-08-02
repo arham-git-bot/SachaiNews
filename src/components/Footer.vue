@@ -1,7 +1,7 @@
 <template> 
 <v-divider></v-divider>
-  <div class="w-[100%] flex flex-row justify-between">
-    <div class="w-[45%]">
+  <div class="w-[100%] flex flex-col sm:flex-row justify-between">
+    <div class="w-[100%] sm:w-[45%]">
       <div>
         <a
           href="https://sachai.io/"
@@ -14,16 +14,16 @@
             class="h-[80px] w-auto"
         /></a>
       </div>
-      <div class="text-[24px] mt-5">Pagess</div>
-      <div class="flex flex-row justify-between gap-0 mt-4 text-[22px]">
+      <div class="text-[24px] mt-5">Pages</div>
+      <div class="flex flex-row justify-between w-full mt-4 text-[18px] sm:text-[22px]">
         <div>Home</div>
         <div>Category</div>
         <div>Astrology</div>
         <div>Login</div>
-        <div>About Us</div>
+
       </div>
     </div>
-    <div class="w-[40%] flex justify-around">
+    <div class="w-[100%] sm:w-[40%] flex flex-col sm:align-start align-center sm:flex-row justify-around">
       <div class="w-[40%]">
         <div class="text-[24px] bold text-center mt-8">Get our app</div>
         <div class="mt-5 flex flex-col items-center">
