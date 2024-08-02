@@ -23,8 +23,8 @@
 
       </div>
     </div>
-    <div class="w-[100%] sm:w-[40%] flex flex-col sm:align-start align-center sm:flex-row justify-around">
-      <div class="w-[40%]">
+    <div class="w-[100%] sm:w-[40%] flex flex-col  sm:flex-row justify-around">
+      <div class="w-[100%] sm:w-[40%]">
         <div class="text-[24px] bold text-center mt-8">Get our app</div>
         <div class="mt-5 flex flex-col items-center">
           <a
@@ -49,7 +49,7 @@
           /></a>
         </div>
       </div>
-      <div class="w-[20%] text-[24px] bold text-center mt-8">
+      <div class="w-[100%] sm:w-[20%] text-[20px] sm:text-[24px] bold text-center mt-8">
         Follow Us
 
         <div class="mt-5">
