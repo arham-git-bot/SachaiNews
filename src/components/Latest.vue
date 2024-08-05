@@ -64,15 +64,23 @@ export default {
       blogs: [],
       SACHAI_NEWS_URL: 'https://news.sachai.io/news/',
       languageId: "6421a32aa020a23deacecf92",
+      screenWidth: window.innerWidth,
     };
   },
   computed: {
     slicedData() {
+      if (this.screenWidth < 640) {
+        return this.blogs.slice(0, 2);
+      }
       return this.blogs.slice(0, 4);
     },
   },
   mounted() {
     this.fetchBlogs();
+    window.addEventListener('resize', this.updateScreenWidth);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateScreenWidth);
   },
   methods: {
     async fetchBlogs() {
@@ -84,7 +92,7 @@ export default {
             page: 1,
           }
         );
-        this.blogs = response.data; 
+        this.blogs = response.data;
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
@@ -98,7 +106,11 @@ export default {
     formatPublishTime(publishTime) {
       return moment(publishTime).fromNow();
     },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
+    },
   },
 };
+
 </script>
 
