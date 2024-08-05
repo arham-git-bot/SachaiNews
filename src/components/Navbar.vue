@@ -39,13 +39,13 @@
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <!-- Dropdown content here -->
+            
             </div>
           </div>
           <div><a href="">Astrology</a></div>
           <div><a href="/Login">Login</a></div>
         </div>
-        <!-- Hamburger Button -->
+
         <div class="md:hidden flex items-end justify-end">
           <button @click="toggleMenu" class="hamburger-btn">
             &#9776;
